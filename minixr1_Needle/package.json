@@ -4,9 +4,11 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev --experimental-https",
-		"build": "next build && npx --yes @needle-tools/gltf-build-pipeline transform ./dist",
+		"build": "next build && npx --yes @needle-tools/gltf-build-pipeline transform ./out",
+		"build:vercel": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"vercel-build": "npm run build"
 	},
 	"dependencies": {
 	  "@babel/runtime": "^7.16.0",

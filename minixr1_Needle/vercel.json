@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "functions": {},
+  "env": {
+    "NEEDLE_CLOUD_TOKEN": "@needle_cloud_token"
+  }
+}

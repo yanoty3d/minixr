@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+
+# Build artifacts
+.next
+dist
+build.log
+
+# Local environment files
+.env
+.env*.local
+
+# IDE files
+.vscode
+.idea
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Certificates (if any)
+certificates/
+
+# Unity related files (not needed for web deployment)
+../minixr1/Library/
+../minixr1/Temp/
+../minixr1/Logs/
