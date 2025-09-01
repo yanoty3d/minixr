@@ -1,3 +1,7 @@
+// DEPRECATED: This file is no longer used
+// The actual implementation is in: ../minixr1/Assets/Scripts/minixrNPM~/ImprovedFirstPersonController.ts
+// This file was kept for reference but should not be imported or used
+
 import { FirstPersonController } from "firstpersoncontroller/FirstPersonCharacter";
 
 // Documentation → https://docs.needle.tools/scripting

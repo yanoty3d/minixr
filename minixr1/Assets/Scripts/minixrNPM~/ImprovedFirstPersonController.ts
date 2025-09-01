@@ -68,6 +68,13 @@ export class ImprovedFirstPersonController extends Behaviour {
         this.syncedTransform = this.gameObject.getComponent(SyncedTransform)!;
         this.mainCamera = this.gameObject.getComponentInChildren(Camera)!;
 
+        // Unity Inspectorで設定された値を基準に速度調整
+        // デフォルト速度を75%に、スプリント速度を1.5倍に
+        this.movementSpeed = this.movementSpeed * 0.75;
+        this.sprintSpeed = this.sprintSpeed * 1.5;
+        this.maxSpeed = this.maxSpeed * 0.75;
+        this.maxSprintSpeed = this.maxSprintSpeed * 1.5;
+
         if (this.isMultiplayer()) {
             this.playerState.onOwnerChangeEvent.addEventListener(() => this.onOwnerChanged());
         } else {
