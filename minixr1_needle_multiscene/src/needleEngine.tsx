@@ -36,7 +36,7 @@ export default function NeedleEngine({ ...props }): JSX.Element {
           console.error(e)
         });
     }
-  }, [])
+  }, [props?.src])
 
   return (
     <>

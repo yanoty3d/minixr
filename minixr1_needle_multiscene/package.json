@@ -4,9 +4,13 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev --experimental-https",
-		"build": "next build && npx --yes @needle-tools/gltf-build-pipeline transform ./dist",
+		"prebuild": "sed -i '' 's/\\.ts\"/\\.js\"/g' src/generated/register_types.ts",
+		"build": "next build && npx --yes @needle-tools/gltf-build-pipeline transform ./dist --config gltf-transform.config.json",
+		"build:vercel": "next build && cp routes-manifest-template.json ./dist/routes-manifest.json",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"prevercel-build": "sed -i '' 's/\\.ts\"/\\.js\"/g' src/generated/register_types.ts",
+		"vercel-build": "npm run build:vercel && npx --yes @needle-tools/gltf-build-pipeline transform ./dist --config gltf-transform.config.json"
 	},
 	"dependencies": {
 	  "@babel/runtime": "^7.16.0",

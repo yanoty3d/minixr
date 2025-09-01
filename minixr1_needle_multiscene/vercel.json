@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "regions": ["iad1"],
+  "env": {
+    "NEEDLE_CLOUD_TOKEN": "nc_3aecd1a76e6ec17a25b9750d76d15c3839190ee7"
+  }
+}

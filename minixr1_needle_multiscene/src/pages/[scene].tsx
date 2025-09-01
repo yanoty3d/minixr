@@ -60,7 +60,7 @@ export default function ScenePage() {
         <div className="text-center">
           <h1 className="mb-4 text-2xl font-bold">シーンが見つかりません</h1>
           <p className="mb-6 text-gray-600">
-            シーン "{scene}" は存在しません。
+            シーン &quot;{scene}&quot; は存在しません。
           </p>
           <div className="space-y-2">
             <p className="text-sm text-gray-500">利用可能なシーン:</p>
