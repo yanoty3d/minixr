@@ -5,6 +5,16 @@
     },
     {
       "path": "./node_modules/@needle-tools/engine"
+    },
+    {
+      "name": "minixrnpm",
+      "path": "node_modules/minixrnpm",
+      "@needle:managed": true
+    },
+    {
+      "name": "firstpersoncontroller",
+      "path": "node_modules/firstpersoncontroller",
+      "@needle:managed": true
     }
   ],
   "settings": {

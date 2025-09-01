@@ -24,6 +24,8 @@
 	  "react-dom": "18.2.0",
 	  "tailwindcss": "3.3.1",
 	  "three": "npm:@needle-tools/three@0.169.11",
-	  "typescript": "5.0.4"
+	  "typescript": "5.0.4",
+	  "minixrnpm": "file:../minixr1/Assets/Scripts/minixrNPM~",
+	  "firstpersoncontroller": "file:../minixr1/Library/PackageCache/com.needle.engine-samples/Runtime/FirstPersonController/Scripts/FirstPersonController~"
 	}
 }

@@ -273,7 +273,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.097788066, y: -0.8736338, z: 0.19678175, w: 0.43414113}
   m_LocalPosition: {x: 6.091816, y: 3.6271122, z: 4.6157355}
-  m_LocalScale: {x: 1.0000007, y: 1, z: 1.0000005}
+  m_LocalScale: {x: 1.0000014, y: 1, z: 1.0000014}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -395,7 +395,11 @@ MonoBehaviour:
   RemoteUrl: 
   ExportOnSave: 1
   AutoCompress: 0
-  Dependencies: []
+  Dependencies:
+  - Name: minixrnpm
+    Version: 1.0.0
+    Path: Assets/Scripts/minixrNPM.npmdef
+    Guid: 66b4c0b566d614c55a7b83642a0302e9
   CloudName: Untitled
   CloudTeam: 
 --- !u!4 &784234924

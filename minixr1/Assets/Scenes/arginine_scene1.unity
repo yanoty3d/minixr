@@ -11084,7 +11084,15 @@ MonoBehaviour:
   RemoteUrl: 
   ExportOnSave: 1
   AutoCompress: 0
-  Dependencies: []
+  Dependencies:
+  - Name: minixrnpm
+    Version: 1.0.0
+    Path: Assets/Scripts/minixrNPM.npmdef
+    Guid: 66b4c0b566d614c55a7b83642a0302e9
+  - Name: firstpersoncontroller
+    Version: 1.0.0
+    Path: Packages/com.needle.engine-samples/Runtime/FirstPersonController/Scripts/FirstPersonController.npmdef
+    Guid: ee750e073bd25fc4eb89db0ca44c0416
   CloudName: arginine_scene1
   CloudTeam: 
 --- !u!4 &1330285621
