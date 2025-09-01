@@ -27,6 +27,7 @@
 	  "tailwindcss": "3.3.1",
 	  "three": "npm:@needle-tools/three@0.169.11",
 	  "typescript": "5.0.4",
-	  "firstpersoncontroller": "file:../minixr1/Library/PackageCache/com.needle.engine-samples/Runtime/FirstPersonController/Scripts/FirstPersonController~"
+	  "firstpersoncontroller": "file:../minixr1/Library/PackageCache/com.needle.engine-samples/Runtime/FirstPersonController/Scripts/FirstPersonController~",
+	  "minixrnpm": "file:../minixr1/Assets/Scripts/minixrNPM~"
 	}
 }

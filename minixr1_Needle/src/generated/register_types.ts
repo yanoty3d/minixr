@@ -1,8 +1,8 @@
 ﻿// Import types from dependencies
 import "firstpersoncontroller"
-import "firstpersoncontroller/codegen/register_types.ts"
+import "firstpersoncontroller/codegen/register_types"
 import "minixrnpm"
-import "minixrnpm/codegen/register_types.ts"
+import "minixrnpm/codegen/register_types"
 
 /* eslint-disable */
 import { TypeStore } from "@needle-tools/engine"

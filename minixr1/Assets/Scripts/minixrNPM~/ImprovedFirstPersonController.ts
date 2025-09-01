@@ -100,10 +100,10 @@ export class ImprovedFirstPersonController extends Behaviour {
 
     protected registerInput() {
         if (this.enableDesktopInput) {
-            this.context.renderer.domElement.addEventListener("pointerdown", this.onPointerDown.bind(this));
-            this.context.renderer.domElement.addEventListener("pointermove", this.onPointerMove.bind(this));
-            this.context.renderer.domElement.addEventListener("pointerup", this.onPointerUp.bind(this));
-            this.context.renderer.domElement.addEventListener("pointerleave", this.onPointerLeave.bind(this));
+            this.context.renderer.domElement.addEventListener("pointerdown", this.handlePointerDown.bind(this));
+            this.context.renderer.domElement.addEventListener("pointermove", this.handlePointerMove.bind(this));
+            this.context.renderer.domElement.addEventListener("pointerup", this.handlePointerUp.bind(this));
+            this.context.renderer.domElement.addEventListener("pointerleave", this.handlePointerLeave.bind(this));
             
             // Add keydown event listener for arrow keys and Q/E rotation
             this.keydownHandler = this.onKeyDown.bind(this);
@@ -112,17 +112,17 @@ export class ImprovedFirstPersonController extends Behaviour {
     }
 
     protected unregisterInput() {
-        this.context.renderer.domElement.removeEventListener("pointerdown", this.onPointerDown.bind(this));
-        this.context.renderer.domElement.removeEventListener("pointermove", this.onPointerMove.bind(this));
-        this.context.renderer.domElement.removeEventListener("pointerup", this.onPointerUp.bind(this));
-        this.context.renderer.domElement.removeEventListener("pointerleave", this.onPointerLeave.bind(this));
+        this.context.renderer.domElement.removeEventListener("pointerdown", this.handlePointerDown.bind(this));
+        this.context.renderer.domElement.removeEventListener("pointermove", this.handlePointerMove.bind(this));
+        this.context.renderer.domElement.removeEventListener("pointerup", this.handlePointerUp.bind(this));
+        this.context.renderer.domElement.removeEventListener("pointerleave", this.handlePointerLeave.bind(this));
         
         if (this.keydownHandler) {
             window.removeEventListener("keydown", this.keydownHandler);
         }
     }
 
-    protected onPointerDown(event: PointerEvent) {
+    protected handlePointerDown(event: PointerEvent) {
         if (event.button === 0) {
             this.isDragging = true;
             this.lastPointerPosition.set(event.clientX, event.clientY);
@@ -130,7 +130,7 @@ export class ImprovedFirstPersonController extends Behaviour {
         }
     }
 
-    protected onPointerMove(event: PointerEvent) {
+    protected handlePointerMove(event: PointerEvent) {
         if (this.isDragging && event.buttons === 1) {
             const deltaX = event.clientX - this.lastPointerPosition.x;
             const deltaY = event.clientY - this.lastPointerPosition.y;
@@ -140,14 +140,14 @@ export class ImprovedFirstPersonController extends Behaviour {
         }
     }
 
-    protected onPointerUp(event: PointerEvent) {
+    protected handlePointerUp(event: PointerEvent) {
         if (event.button === 0) {
             this.isDragging = false;
             this.context.renderer.domElement.releasePointerCapture(event.pointerId);
         }
     }
 
-    protected onPointerLeave(event: PointerEvent) {
+    protected handlePointerLeave(event: PointerEvent) {
         this.isDragging = false;
     }
 

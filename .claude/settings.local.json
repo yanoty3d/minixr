@@ -3,7 +3,21 @@
     "allow": [
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(vercel build:*)",
+      "Bash(vercel env add:*)",
+      "Bash(vercel deploy:*)",
+      "Bash(vercel secrets add:*)",
+      "Bash(vercel ls:*)",
+      "Bash(gh issue view:*)",
+      "mcp__RepoPrompt__search",
+      "mcp__RepoPrompt__read_file",
+      "mcp__RepoPrompt__get_file_tree",
+      "Bash(git checkout:*)",
+      "Bash(gh issue comment:*)",
+      "Bash(gh issue close:*)",
+      "Bash(git merge:*)",
+      "Bash(git branch:*)"
     ],
     "deny": [],
     "ask": []

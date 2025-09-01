@@ -4,10 +4,21 @@
       "path": "."
     },
     {
-      "path": "./node_modules/@needle-tools/engine"
+      "path": "./node_modules/@needle-tools/engine",
+      "name": "🌵 Needle Engine"
+    },
+    {
+      "name": "minixrnpm",
+      "path": "node_modules/minixrnpm",
+      "@needle:managed": true
+    },
+    {
+      "name": "firstpersoncontroller",
+      "path": "node_modules/firstpersoncontroller",
+      "@needle:managed": true
     }
   ],
   "settings": {
-    "window.title": "Next"
+    "window.title": "minixr1_Needle"
   }
 }
