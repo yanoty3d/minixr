@@ -87,7 +87,6 @@ export default function Home() {
           <div className="mt-3 space-y-1 font-mono text-sm">
             {Object.keys(SCENE_CONFIG).map((sceneName) => (
               <div key={sceneName} className="text-blue-600">
-                <span className="text-gray-600">{typeof window !== 'undefined' ? window.location.origin : ''}</span>
                 <span className="font-bold">/{sceneName}</span>
               </div>
             ))}
