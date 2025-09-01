@@ -1,11 +1,10 @@
 {
-  "buildCommand": "npm run build",
+  "version": 2,
+  "buildCommand": "npm run vercel-build",
   "outputDirectory": "out",
   "installCommand": "npm install",
-  "framework": "nextjs",
   "regions": ["iad1"],
-  "functions": {},
   "env": {
-    "NEEDLE_CLOUD_TOKEN": "@needle_cloud_token"
+    "NEEDLE_CLOUD_TOKEN": "nc_3aecd1a76e6ec17a25b9750d76d15c3839190ee7"
   }
 }

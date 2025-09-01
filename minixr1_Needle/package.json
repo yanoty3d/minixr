@@ -5,10 +5,10 @@
 	"scripts": {
 		"dev": "next dev --experimental-https",
 		"build": "next build && npx --yes @needle-tools/gltf-build-pipeline transform ./out",
-		"build:vercel": "next build",
+		"build:vercel": "next build && cp routes-manifest-template.json ./out/routes-manifest.json",
 		"start": "next start",
 		"lint": "next lint",
-		"vercel-build": "npm run build"
+		"vercel-build": "npm run build:vercel && npx --yes @needle-tools/gltf-build-pipeline transform ./out"
 	},
 	"dependencies": {
 	  "@babel/runtime": "^7.16.0",

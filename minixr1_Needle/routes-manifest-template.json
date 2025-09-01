@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "pages404": true,
+  "basePath": "",
+  "redirects": [],
+  "rewrites": [],
+  "headers": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^\\/$",
+      "namedRegex": "^\\/$",
+      "routeKeys": {}
+    },
+    {
+      "page": "/404",
+      "regex": "^\\/404\\/?$",
+      "namedRegex": "^\\/404(?:\\/)?$",
+      "routeKeys": {}
+    }
+  ],
+  "dynamicRoutes": [],
+  "dataRoutes": [],
+  "i18n": null
+}
