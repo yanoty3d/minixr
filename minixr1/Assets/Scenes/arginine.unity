@@ -2230,7 +2230,7 @@ MeshCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983858056}
+  m_GameObject: {fileID: 2074042624}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -8015,11 +8015,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 159038827}
   m_SourcePrefab: {fileID: -2294180064158701977, guid: 02c27b244d5a643cf8cd58f160ea0c71, type: 3}
---- !u!1 &983858056 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 870326454382747783, guid: 02c27b244d5a643cf8cd58f160ea0c71, type: 3}
-  m_PrefabInstance: {fileID: 983858055}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &983858057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4144163466057559544, guid: 02c27b244d5a643cf8cd58f160ea0c71, type: 3}
@@ -9401,7 +9396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5503133249337396651, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.98
+      value: 4.56
       objectReference: {fileID: 0}
     - target: {fileID: 5503133249337396651, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9409,11 +9404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5503133249337396651, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.81
+      value: 9.99
       objectReference: {fileID: 0}
     - target: {fileID: 5503133249337396651, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.72826624
+      value: 0.008486418
       objectReference: {fileID: 0}
     - target: {fileID: 5503133249337396651, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9421,7 +9416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5503133249337396651, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.68529433
+      value: -0.999964
       objectReference: {fileID: 0}
     - target: {fileID: 5503133249337396651, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
       propertyPath: m_LocalRotation.z
@@ -9433,7 +9428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5503133249337396651, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -86.518
+      value: -179.028
       objectReference: {fileID: 0}
     - target: {fileID: 5503133249337396651, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -9482,7 +9477,7 @@ MonoBehaviour:
   controller: {fileID: 1027208390}
   xRotTarget: {fileID: 1027208389}
   lookSensitivity: 1
-  movementSpeed: 50
+  movementSpeed: 20
   sprintSpeed: 80
   maxSpeed: 7
   maxSprintSpeed: 7
@@ -11253,7 +11248,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363355123}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12658,7 +12653,7 @@ MonoBehaviour:
   DirectoryName: ../minixr1_Needle
   RemoteUrl: 
   ExportOnSave: 1
-  AutoCompress: 1
+  AutoCompress: 0
   Dependencies:
   - Name: firstpersoncontroller
     Version: 
@@ -12702,9 +12697,9 @@ MonoBehaviour:
   TextureMaxSize: 8192
   GenerateTextureLODs: 1
   UseMaxSize: 1
-  LODsMaxSize: 128
-  MeshCompression: 10
-  GenerateMeshLODs: 1
+  LODsMaxSize: 512
+  MeshCompression: 0
+  GenerateMeshLODs: 0
   TextureOverrides: []
   MeshOverrides: []
 --- !u!114 &1666012071
@@ -15747,6 +15742,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058683995}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2074042624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 870326454382747783, guid: 02c27b244d5a643cf8cd58f160ea0c71, type: 3}
+  m_PrefabInstance: {fileID: 983858055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2077296310
 GameObject:
   m_ObjectHideFlags: 0

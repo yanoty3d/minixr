@@ -17,7 +17,10 @@
       "Bash(gh issue comment:*)",
       "Bash(gh issue close:*)",
       "Bash(git merge:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "mcp__RepoPrompt__chat_send",
+      "WebFetch(domain:engine.needle.tools)",
+      "Bash(npm run:*)"
     ],
     "deny": [],
     "ask": []

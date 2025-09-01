@@ -86,3 +86,4 @@ The project uses GitHub Actions for automated deployment:
 2. Node.js development happens in `minixr1_Needle/` directory
 3. Use HTTPS development server for proper WebGL/WebXR testing
 4. Ensure `NEEDLE_CLOUD_TOKEN` is configured for builds that include cloud features
+- Unityのsceneファイルは、CLIから修正するのが難しいので、Unity Editor上で修正するようユーザーに指示せよ。
