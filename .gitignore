@@ -21,6 +21,29 @@ minixr1/*.mdb
 minixr1/*.opendb
 minixr1/*.VC.db
 
+# MultiSceneTest Reference Project
+MultiSceneTest/[Ll]ibrary/
+MultiSceneTest/[Tt]emp/
+MultiSceneTest/[Oo]bj/
+MultiSceneTest/[Bb]uild/
+MultiSceneTest/[Bb]uilds/
+MultiSceneTest/[Ll]ogs/
+MultiSceneTest/[Mm]emoryCaptures/
+MultiSceneTest/[Uu]ser[Ss]ettings/
+MultiSceneTest/*.csproj
+MultiSceneTest/*.sln
+MultiSceneTest/*.suo
+MultiSceneTest/*.tmp
+MultiSceneTest/*.user
+MultiSceneTest/*.userprefs
+MultiSceneTest/*.pidb
+MultiSceneTest/*.booproj
+MultiSceneTest/*.svd
+MultiSceneTest/*.pdb
+MultiSceneTest/*.mdb
+MultiSceneTest/*.opendb
+MultiSceneTest/*.VC.db
+
 # Next.js Project (minixr1_Needle)
 minixr1_Needle/node_modules/
 minixr1_Needle/.next/

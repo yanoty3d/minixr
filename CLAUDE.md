@@ -86,4 +86,12 @@ The project uses GitHub Actions for automated deployment:
 2. Node.js development happens in `minixr1_Needle/` directory
 3. Use HTTPS development server for proper WebGL/WebXR testing
 4. Ensure `NEEDLE_CLOUD_TOKEN` is configured for builds that include cloud features
-- Unityのsceneファイルは、CLIから修正するのが難しいので、Unity Editor上で修正するようユーザーに指示せよ。
+
+## Reference Projects
+
+- **MultiSceneTest/**: Reference Unity project for MultiScene implementation patterns. This project demonstrates how to structure multi-scene setups and can be used as a reference when implementing similar functionality in the main project.
+
+## Important Notes
+
+- Unity scene files (`.unity`) are difficult to modify via CLI - always instruct users to make scene modifications in Unity Editor
+- When working with multi-scene setups, refer to the `MultiSceneTest/` project for implementation patterns
