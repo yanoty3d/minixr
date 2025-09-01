@@ -1,0 +1,16 @@
+{
+  "sceneName": "Multiscene_root",
+  "meta": null,
+  "absolutePath": "https://localhost:3000",
+  "deployOnly": false,
+  "needleEditor": null,
+  "developmentBuild": false,
+  "generator": "Unity 6000.0.23f1, Needle Engine Integration @4.8.8",
+  "allowHotReload": true,
+  "gzip": false,
+  "license": {
+    "team": "org_075ej639thuh"
+  },
+  "facebookInstantGames": null,
+  "useRapier": true
+}

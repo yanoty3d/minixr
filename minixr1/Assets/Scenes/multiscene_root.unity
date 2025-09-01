@@ -119,6 +119,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &63974393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63974395}
+  - component: {fileID: 63974394}
+  m_Layer: 0
+  m_Name: Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &63974394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63974393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2938273b1a364736b73df79395a0c934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoLoadFirstScene: 0
+  createMenuButtons: 1
+  scenes:
+  - asset: {fileID: 102900000, guid: 69eaa2bae7369401ca09a8828f791f29, type: 3}
+  - asset: {fileID: 102900000, guid: 7fd92d277a41c460d8a8d615a199bbcc, type: 3}
+  loadingScene:
+    asset: {fileID: 0}
+  queryParameterName: scene
+  useSceneName: 1
+  clamp: 0
+  useHistory: 1
+  useKeyboard: 1
+  useSwipe: 1
+  useSceneLighting: 1
+  useSceneBackground: 1
+  preloadNext: 1
+  preloadPrevious: 1
+  preloadConcurrent: 2
+  sceneLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &63974395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63974393}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.654029, y: 1.4999999, z: 7.7862687}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &706762903
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +273,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.097788066, y: -0.8736338, z: 0.19678175, w: 0.43414113}
   m_LocalPosition: {x: 6.091816, y: 3.6271122, z: 4.6157355}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000007, y: 1, z: 1.0000005}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -326,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986a3a93ac16ec0428d8989979ec0966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Needle.Engine.ExportInfo, Needle.Engine.Common $ GlobalObjectId_V1-2-49068307165cdb346a242c48a6528235-784234923-0
-  DirectoryName: Needle/newProject
+  DirectoryName: ../minixr1_needle_multiscene
   RemoteUrl: 
   ExportOnSave: 1
   AutoCompress: 0
@@ -341,7 +406,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784234922}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -537,7 +602,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 2.39, z: -3.31}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -574,3 +639,4 @@ SceneRoots:
   - {fileID: 1211803453}
   - {fileID: 706762906}
   - {fileID: 1609064307}
+  - {fileID: 63974395}

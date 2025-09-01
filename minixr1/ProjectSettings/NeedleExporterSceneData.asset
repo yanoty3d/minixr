@@ -18,16 +18,20 @@ MonoBehaviour:
     - ProjectPath: ../minixr1_Needle
     BuilderScene: 
   - Path: Assets/Scenes/arginine_scene2.unity
-    Projects: []
+    Projects:
+    - ProjectPath: ../minixr1_needle_multiscene
     BuilderScene: 
   - Path: Assets/Scenes/arginine_scene1.unity
-    Projects: []
+    Projects:
+    - ProjectPath: ../minixr1_needle_multiscene
     BuilderScene: 
   - Path: Assets/Scenes/multiscen_root.unity
     Projects: []
     BuilderScene: 
   - Path: Assets/Scenes/multiscene_root.unity
-    Projects: []
+    Projects:
+    - ProjectPath: ../minixr1_needle_multiscene
     BuilderScene: 
   Projects:
   - ProjectPath: ../minixr1_Needle
+  - ProjectPath: ../minixr1_needle_multiscene
