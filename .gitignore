@@ -1,0 +1,55 @@
+# Unity Project Directories
+minixr1/[Ll]ibrary/
+minixr1/[Tt]emp/
+minixr1/[Oo]bj/
+minixr1/[Bb]uild/
+minixr1/[Bb]uilds/
+minixr1/[Ll]ogs/
+minixr1/[Mm]emoryCaptures/
+minixr1/[Uu]ser[Ss]ettings/
+minixr1/*.csproj
+minixr1/*.sln
+minixr1/*.suo
+minixr1/*.tmp
+minixr1/*.user
+minixr1/*.userprefs
+minixr1/*.pidb
+minixr1/*.booproj
+minixr1/*.svd
+minixr1/*.pdb
+minixr1/*.mdb
+minixr1/*.opendb
+minixr1/*.VC.db
+
+# Next.js Project (minixr1_Needle)
+minixr1_Needle/node_modules/
+minixr1_Needle/.next/
+minixr1_Needle/out/
+minixr1_Needle/dist/
+minixr1_Needle/build/
+minixr1_Needle/.env
+minixr1_Needle/.env*.local
+minixr1_Needle/.vercel
+minixr1_Needle/*.tsbuildinfo
+minixr1_Needle/next-env.d.ts
+minixr1_Needle/build.log
+
+# System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE Files
+.vs/
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
