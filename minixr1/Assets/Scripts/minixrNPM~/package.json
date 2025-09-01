@@ -1,0 +1,15 @@
+{
+  "name": "minixrnpm",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {},
+  "peerDependencies": {
+    "@needle-tools/engine": "4.8.8",
+    "three": "npm:@needle-tools/three@0.169.11"
+  },
+  "devDependencies": {
+    "@needle-tools/engine": "4.8.8",
+    "three": "npm:@needle-tools/three@0.169.11",
+    "@types/three": "0.169.0"
+  }
+}

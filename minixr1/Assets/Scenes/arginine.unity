@@ -2328,7 +2328,7 @@ MonoBehaviour:
   onJump:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1027208390}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Needle.Typescript.GeneratedComponents.FirstPersonController,
           Needle.Engine-Samples.Runtime
         m_MethodName: jump
@@ -2344,7 +2344,7 @@ MonoBehaviour:
   onLook:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1027208390}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Needle.Typescript.GeneratedComponents.FirstPersonController,
           Needle.Engine-Samples.Runtime
         m_MethodName: look
@@ -2360,7 +2360,7 @@ MonoBehaviour:
   onMove:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1027208390}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Needle.Typescript.GeneratedComponents.FirstPersonController,
           Needle.Engine-Samples.Runtime
         m_MethodName: move
@@ -8472,6 +8472,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1027208390, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027208390, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
       propertyPath: stoppingDecay
       value: 50
       objectReference: {fileID: 0}
@@ -8523,23 +8527,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPS Character
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1027208390, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5503133249337396652, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1027208391}
   m_SourcePrefab: {fileID: 100100000, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
---- !u!114 &1027208390 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1027208390, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
+--- !u!1 &1027208388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5503133249337396652, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
   m_PrefabInstance: {fileID: 1027208387}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!1 &1027208389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5503133250123964516, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
+  m_PrefabInstance: {fileID: 1027208387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &1027208390 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 5503133249337396649, guid: ec61782f16718cf4c8320a89b609f578, type: 3}
+  m_PrefabInstance: {fileID: 1027208387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1027208391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027208388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e32309c0f1a55e813d63d804ba412a8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b6ed34e5f1d9eed8dba8c42c431076a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Needle.Typescript.GeneratedComponents.FirstPersonController,
-    Needle.Engine-Samples.Runtime $ GlobalObjectId_V1-2-00000000000000000000000000000000-1027208390-0
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1027208390}
+  xRotTarget: {fileID: 1027208389}
+  lookSensitivity: 1
+  movementSpeed: 50
+  sprintSpeed: 80
+  maxSpeed: 7
+  maxSprintSpeed: 7
+  jumpSpeed: 5
+  xRotClamp: {x: -89, y: 89}
+  enableTouchInput: 0
+  enableDesktopInput: 1
 --- !u!1 &1054679372
 GameObject:
   m_ObjectHideFlags: 0
@@ -11348,6 +11382,10 @@ MonoBehaviour:
     Version: 
     Path: Packages/com.needle.engine-samples/Runtime/FirstPersonController/Scripts/FirstPersonController.npmdef
     Guid: ee750e073bd25fc4eb89db0ca44c0416
+  - Name: minixrnpm
+    Version: 1.0.0
+    Path: Assets/Scripts/minixrNPM.npmdef
+    Guid: 66b4c0b566d614c55a7b83642a0302e9
   CloudName: First Person Controller - Singleplayer
   CloudTeam: 
 --- !u!4 &1666012068
