@@ -1,133 +1,109 @@
-import Image from 'next/image'
+import Link from 'next/link'
 import { Inter } from 'next/font/google'
-
-import dynamic from 'next/dynamic'
-
-import { type NeedleEngineProps } from '../needleEngine'
-const NeedleEngine = dynamic<NeedleEngineProps>(() => import('../needleEngine'), { ssr: false })
-
-
 
 const inter = Inter({ subsets: ['latin'] })
 
+// Available scene configurations  
+const SCENE_CONFIG = {
+  'multiscene_root': {
+    name: 'マルチシーンルート',
+    description: 'シーン切り替えの管理画面',
+    icon: '🎛️'
+  },
+  'arginine_scene1': {
+    name: 'アルギニンシーン1', 
+    description: 'アルギニン分子の3Dビュー（シーン1）',
+    icon: '🧬'
+  },
+  'arginine_scene2': {
+    name: 'アルギニンシーン2',
+    description: 'アルギニン分子の3Dビュー（シーン2）', 
+    icon: '⚛️'
+  }
+} as const
+
 export default function Home() {
   return (
-
-    <main className="flex min-h-screen flex-col items-center justify-between min-[800px]:p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col items-center bg-gradient-to-br from-blue-50 to-white">
+      {/* Header */}
+      <div className="w-full bg-white shadow-sm">
+        <div className="mx-auto max-w-6xl p-6">
+          <h1 className={`${inter.className} text-4xl font-bold text-gray-900`}>
+            MiniXR マルチシーンビューア
+          </h1>
+          <p className="mt-2 text-lg text-gray-600">
+            3Dシーンを選択して探索してください
+          </p>
         </div>
       </div>
 
-      <div className="relative overflow-clip flex items-center justify-between w-full h-[48rem] lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 my-5">
+      {/* Scene Selection Grid */}
+      <div className="mx-auto max-w-6xl flex-1 p-6">
+        <div className="mt-8">
+          <h2 className={`${inter.className} mb-6 text-2xl font-semibold text-gray-800`}>
+            利用可能なシーン
+          </h2>
+          
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {Object.entries(SCENE_CONFIG).map(([sceneName, config]) => (
+              <Link
+                key={sceneName}
+                href={`/${sceneName}`}
+                className="group block transform rounded-xl bg-white p-6 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="text-3xl">{config.icon}</div>
+                  <div className="flex-1">
+                    <h3 className={`${inter.className} text-xl font-semibold text-gray-900 group-hover:text-blue-600`}>
+                      {config.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-600">
+                      {config.description}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="mt-4 flex items-center justify-between">
+                  <span className="text-xs text-gray-500 font-mono">
+                    /{sceneName}
+                  </span>
+                  <div className="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-600 group-hover:bg-blue-600 group-hover:text-white">
+                    開く →
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
 
-        <NeedleEngine
-          style={{
-            left: "0",
-            top: "0",
-            width: '100%',
-            height: '100%',
-          }}
-        />
+        {/* Quick Access Info */}
+        <div className="mt-12 rounded-lg bg-blue-50 p-6">
+          <h3 className={`${inter.className} text-lg font-semibold text-blue-900`}>
+            直接アクセス
+          </h3>
+          <p className="mt-2 text-sm text-blue-700">
+            URLで直接シーンにアクセスできます：
+          </p>
+          <div className="mt-3 space-y-1 font-mono text-sm">
+            {Object.keys(SCENE_CONFIG).map((sceneName) => (
+              <div key={sceneName} className="text-blue-600">
+                <span className="text-gray-600">{typeof window !== 'undefined' ? window.location.origin : ''}</span>
+                <span className="font-bold">/{sceneName}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
+      {/* Footer */}
+      <footer className="w-full bg-gray-50 p-4">
+        <div className="mx-auto max-w-6xl text-center text-sm text-gray-500">
+          <p>Powered by Needle Engine + Next.js</p>
+          <p className="mt-1">
+            Unity scenes exported as GLB files and rendered in the browser
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        </div>
+      </footer>
     </main>
   )
 }
