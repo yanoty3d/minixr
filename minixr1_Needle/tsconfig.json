@@ -17,6 +17,7 @@
     "jsx": "preserve",
     "incremental": true,
     "experimentalDecorators": true,
+    "allowImportingTsExtensions": true,
     "paths": {
       "@/*": ["./src/*"]
     }
