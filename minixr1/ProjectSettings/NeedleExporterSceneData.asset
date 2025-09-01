@@ -17,5 +17,17 @@ MonoBehaviour:
     Projects:
     - ProjectPath: ../minixr1_Needle
     BuilderScene: 
+  - Path: Assets/Scenes/arginine_scene2.unity
+    Projects: []
+    BuilderScene: 
+  - Path: Assets/Scenes/arginine_scene1.unity
+    Projects: []
+    BuilderScene: 
+  - Path: Assets/Scenes/multiscen_root.unity
+    Projects: []
+    BuilderScene: 
+  - Path: Assets/Scenes/multiscene_root.unity
+    Projects: []
+    BuilderScene: 
   Projects:
   - ProjectPath: ../minixr1_Needle
