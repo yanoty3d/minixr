@@ -7845,6 +7845,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AminoAcid
       objectReference: {fileID: 0}
+    - target: {fileID: 1386672492315005732, guid: 02c27b244d5a643cf8cd58f160ea0c71, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513334631082268962, guid: 02c27b244d5a643cf8cd58f160ea0c71, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3551869090324006078, guid: 02c27b244d5a643cf8cd58f160ea0c71, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9

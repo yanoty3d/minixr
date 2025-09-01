@@ -1,5 +1,5 @@
 {
-  "sceneName": "Arginine_scene 1",
+  "sceneName": "Arginine_scene 2",
   "meta": null,
   "absolutePath": "https://localhost:3000",
   "deployOnly": false,
@@ -7,7 +7,7 @@
   "developmentBuild": false,
   "generator": "Unity 6000.0.23f1, Needle Engine Integration @4.8.8",
   "allowHotReload": true,
-  "gzip": false,
+  "gzip": true,
   "license": {
     "team": "org_075ej639thuh"
   },
