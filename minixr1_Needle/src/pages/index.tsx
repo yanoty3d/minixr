@@ -38,8 +38,6 @@ export default function Home() {
             </h3>
             <ul className={`${inter.className} space-y-2 text-sm text-gray-600 dark:text-gray-400`}>
               <li>• ドラッグで視点を回転</li>
-              <li>• ホイールでズームイン/アウト</li>
-              <li>• 右クリックドラッグでパン</li>
             </ul>
           </div>
           
@@ -48,16 +46,14 @@ export default function Home() {
               キーボード操作
             </h3>
             <ul className={`${inter.className} space-y-2 text-sm text-gray-600 dark:text-gray-400`}>
-              <li>• W/A/S/D: 前後左右移動</li>
+              <li>• W/A/S/D または矢印キー: 前後左右移動</li>
+              <li>• Q/E: 左右30度回転</li>
               <li>• Shift: ダッシュ（高速移動）</li>
               <li>• Space: ジャンプ</li>
             </ul>
           </div>
         </div>
         
-        <p className={`${inter.className} text-sm text-gray-500 dark:text-gray-500 mt-6`}>
-          3D空間内を自由に移動して、アルギニンの分子構造をご覧ください
-        </p>
       </div>
     </main>
   )
