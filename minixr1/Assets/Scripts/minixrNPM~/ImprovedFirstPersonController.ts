@@ -61,6 +61,7 @@ export class ImprovedFirstPersonController extends Behaviour {
 
     protected isDragging: boolean = false;
     protected lastPointerPosition = new Vector2();
+    protected keydownHandler?: (event: KeyboardEvent) => void;
 
     awake() {
         this.playerState = this.gameObject.getComponent(PlayerState)!;
@@ -103,6 +104,10 @@ export class ImprovedFirstPersonController extends Behaviour {
             this.context.renderer.domElement.addEventListener("pointermove", this.onPointerMove.bind(this));
             this.context.renderer.domElement.addEventListener("pointerup", this.onPointerUp.bind(this));
             this.context.renderer.domElement.addEventListener("pointerleave", this.onPointerLeave.bind(this));
+            
+            // Add keydown event listener for arrow keys and Q/E rotation
+            this.keydownHandler = this.onKeyDown.bind(this);
+            window.addEventListener("keydown", this.keydownHandler);
         }
     }
 
@@ -111,6 +116,10 @@ export class ImprovedFirstPersonController extends Behaviour {
         this.context.renderer.domElement.removeEventListener("pointermove", this.onPointerMove.bind(this));
         this.context.renderer.domElement.removeEventListener("pointerup", this.onPointerUp.bind(this));
         this.context.renderer.domElement.removeEventListener("pointerleave", this.onPointerLeave.bind(this));
+        
+        if (this.keydownHandler) {
+            window.removeEventListener("keydown", this.keydownHandler);
+        }
     }
 
     protected onPointerDown(event: PointerEvent) {
@@ -140,6 +149,26 @@ export class ImprovedFirstPersonController extends Behaviour {
 
     protected onPointerLeave(event: PointerEvent) {
         this.isDragging = false;
+    }
+
+    protected onKeyDown(event: KeyboardEvent) {
+        // Prevent default behavior for arrow keys and space to avoid page scrolling
+        if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(event.key)) {
+            event.preventDefault();
+        }
+        
+        // Q/E keys for quick 30-degree rotation
+        if (event.key === "q" || event.key === "Q") {
+            event.preventDefault();
+            // Rotate left by 30 degrees
+            this.y += Mathf.toRadians(30);
+            this.yRotTarget?.setRotationFromAxisAngle(this.upVector, this.y);
+        } else if (event.key === "e" || event.key === "E") {
+            event.preventDefault();
+            // Rotate right by 30 degrees
+            this.y -= Mathf.toRadians(30);
+            this.yRotTarget?.setRotationFromAxisAngle(this.upVector, this.y);
+        }
     }
 
     protected onOwnerChanged() {
@@ -220,13 +249,13 @@ export class ImprovedFirstPersonController extends Behaviour {
     protected gatherDesktopInput() {
         const input = this.context.input;
 
-        if (input.isKeyPressed("s") || input.isKeyPressed("DownArrow"))
+        if (input.isKeyPressed("s") || input.isKeyPressed("ArrowDown"))
             this.moveInput.y += -1;
-        else if (input.isKeyPressed("w") || input.isKeyPressed("UpArrow"))
+        else if (input.isKeyPressed("w") || input.isKeyPressed("ArrowUp"))
             this.moveInput.y += 1;
-        if (input.isKeyPressed("d") || input.isKeyPressed("RightArrow"))
+        if (input.isKeyPressed("d") || input.isKeyPressed("ArrowRight"))
             this.moveInput.x += 1;
-        else if (input.isKeyPressed("a") || input.isKeyPressed("LeftArrow"))
+        else if (input.isKeyPressed("a") || input.isKeyPressed("ArrowLeft"))
             this.moveInput.x += -1;
 
         if (input.isKeyDown(" "))
