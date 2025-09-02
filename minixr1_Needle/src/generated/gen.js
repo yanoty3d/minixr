@@ -11,13 +11,13 @@ globalThis["needle:dependencies:ready"] = import("./register_types.ts")
 
 export const needle_exported_files = new Array();
 globalThis["needle:codegen_files"] = needle_exported_files;
-needle_exported_files.push("./assets/arginine_scene1.glb?v=1756715189344");
+needle_exported_files.push("./assets/arginine.glb?v=1756852711550");
 document.addEventListener("DOMContentLoaded", () =>
 {
 	const needleEngine = document.querySelector("needle-engine");
 	if(needleEngine && needleEngine.getAttribute("src") === null)
 	{
-		needleEngine.setAttribute("hash", "1756715189344");
+		needleEngine.setAttribute("hash", "1756852711550");
 		needleEngine.setAttribute("src", JSON.stringify(needle_exported_files));
 	}
 });
